@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22146" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22122"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="LRUCacheSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Aup-HY-qVs">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AE7-tK-X8d">
+                                <rect key="frame" x="0.0" y="756" width="393" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="NbG-7M-F9c"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem title="Cache" id="Lgr-bU-TC4">
+                                        <connections>
+                                            <action selector="cacheSomething:" destination="BYZ-38-t0r" id="zSu-sk-hho"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Retrieve" id="Cr8-lP-Ppz">
+                                        <connections>
+                                            <action selector="retrieveCache:" destination="BYZ-38-t0r" id="vRR-cz-NiQ"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="haG-uJ-ZeB"/>
+                                    <barButtonItem title="Exit" id="k3v-TW-WL3">
+                                        <connections>
+                                            <action selector="exitButton:" destination="BYZ-38-t0r" id="x85-0O-7EV"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My LRU" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JYi-Og-9zb">
+                                <rect key="frame" x="159" y="112" width="75" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="74.670000000000002" id="PMi-ch-z7a"/>
+                                    <constraint firstAttribute="height" constant="42" id="oW5-Vb-cUL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="23"/>
+                                <color key="textColor" systemColor="systemIndigoColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="v8E-bd-LaW"/>
+                        <color key="backgroundColor" red="0.92615733069999995" green="1" blue="0.99045409279999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="JYi-Og-9zb" firstAttribute="top" secondItem="v8E-bd-LaW" secondAttribute="top" constant="53" id="5GQ-gS-nYH"/>
+                            <constraint firstItem="AE7-tK-X8d" firstAttribute="trailing" secondItem="v8E-bd-LaW" secondAttribute="trailing" id="O27-QO-scJ"/>
+                            <constraint firstItem="v8E-bd-LaW" firstAttribute="bottom" secondItem="AE7-tK-X8d" secondAttribute="bottom" constant="18" id="WB1-Dd-IKR"/>
+                            <constraint firstItem="AE7-tK-X8d" firstAttribute="leading" secondItem="v8E-bd-LaW" secondAttribute="leading" id="l5V-ac-6fU"/>
+                            <constraint firstItem="JYi-Og-9zb" firstAttribute="centerX" secondItem="Aup-HY-qVs" secondAttribute="centerX" id="qrx-kY-7Gv"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="88" y="-27"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
